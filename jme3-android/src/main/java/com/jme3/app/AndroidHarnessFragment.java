@@ -205,7 +205,7 @@ public class AndroidHarnessFragment extends Fragment implements
     protected FrameLayout frameLayout = null;
     protected GLSurfaceView view = null;
     protected ImageView splashImageView = null;
-    final private String ESCAPE_EVENT = "TouchEscape";
+    static final private String ESCAPE_EVENT = "TouchEscape";
     private boolean firstDrawFrame = true;
     private LegacyApplication app = null;
     private int viewWidth = 0;
