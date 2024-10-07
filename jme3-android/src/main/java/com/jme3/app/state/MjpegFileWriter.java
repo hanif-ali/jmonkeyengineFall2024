@@ -462,6 +462,10 @@ public class MjpegFileWriter {
         public List<AVIIndex> ind = new ArrayList<>();
 
         public AVIIndexList() {
+            // No initialization needed for now.
+            // If initialization is required in future implementations,
+            // this method should be updated accordingly.
+            throw new UnsupportedOperationException("This method is not yet implemented.");
         }
 
         @SuppressWarnings("unused")
