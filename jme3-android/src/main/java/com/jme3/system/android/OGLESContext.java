@@ -507,8 +507,7 @@ public class OGLESContext implements JmeContext, GLSurfaceView.Renderer, SoftTex
     @Override
     public int getFramebufferHeight() {
         Rect rect = getSurfaceFrame();
-        int result = rect.height();
-        return result;
+        return rect.height();
     }
 
     /**
@@ -519,8 +518,7 @@ public class OGLESContext implements JmeContext, GLSurfaceView.Renderer, SoftTex
     @Override
     public int getFramebufferWidth() {
         Rect rect = getSurfaceFrame();
-        int result = rect.width();
-        return result;
+        return rect.width();
     }
 
     /**
@@ -552,7 +550,6 @@ public class OGLESContext implements JmeContext, GLSurfaceView.Renderer, SoftTex
     private Rect getSurfaceFrame() {
         SurfaceView view = (SurfaceView) androidInput.getView();
         SurfaceHolder holder = view.getHolder();
-        Rect result = holder.getSurfaceFrame();
-        return result;
+        return holder.getSurfaceFrame();
     }
 }
