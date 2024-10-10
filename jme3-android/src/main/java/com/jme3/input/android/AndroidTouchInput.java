@@ -73,7 +73,7 @@ public class AndroidTouchInput implements TouchInput {
     protected int numPointers = 0;
     final private HashMap<Integer, Vector2f> lastPositions = new HashMap<>();
     final private ConcurrentLinkedQueue<InputEvent> inputEventQueue = new ConcurrentLinkedQueue<>();
-    private final static int MAX_TOUCH_EVENTS = 1024;
+    private static final int MAX_TOUCH_EVENTS = 1024;
     private final TouchEventPool touchEventPool = new TouchEventPool(MAX_TOUCH_EVENTS);
     private float scaleX = 1f;
     private float scaleY = 1f;

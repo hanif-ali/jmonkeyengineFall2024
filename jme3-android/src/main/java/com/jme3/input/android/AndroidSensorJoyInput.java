@@ -73,7 +73,7 @@ import java.util.logging.Logger;
  * @author iwgeric
  */
 public class AndroidSensorJoyInput implements SensorEventListener {
-    private final static Logger logger = Logger.getLogger(AndroidSensorJoyInput.class.getName());
+    private static final Logger logger = Logger.getLogger(AndroidSensorJoyInput.class.getName());
 
     private AndroidJoyInput joyInput;
     private SensorManager sensorManager = null;

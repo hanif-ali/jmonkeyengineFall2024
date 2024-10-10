@@ -41,7 +41,7 @@ import java.util.logging.Logger;
  */
 public class AndroidHarness extends Activity implements TouchListener, DialogInterface.OnClickListener, SystemListener {
 
-    protected final static Logger logger = Logger.getLogger(AndroidHarness.class.getName());
+    protected static final Logger logger = Logger.getLogger(AndroidHarness.class.getName());
     /**
      * The application class to start
      */

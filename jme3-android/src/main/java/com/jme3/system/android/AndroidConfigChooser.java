@@ -18,8 +18,8 @@ public class AndroidConfigChooser implements EGLConfigChooser {
 
     private static final Logger logger = Logger.getLogger(AndroidConfigChooser.class.getName());
     protected AppSettings settings;
-    private final static int EGL_OPENGL_ES2_BIT = 4;
-    private final static int EGL_OPENGL_ES3_BIT = 0x40;
+    private static final int EGL_OPENGL_ES2_BIT = 4;
+    private static final int EGL_OPENGL_ES3_BIT = 0x40;
 
     public AndroidConfigChooser(AppSettings settings) {
         this.settings = settings;
