@@ -164,18 +164,12 @@ public class AndroidConfigChooser implements EGLConfigChooser {
         {
             // Get back to openGL ES 2
             configSpec[1]=EGL_OPENGL_ES2_BIT;
-            if (!egl.eglChooseConfig(display, configSpec, null, 0, num_config)) {
-                RendererUtil.checkEGLError(egl);
-                throw new AssertionError();
-            }
+            checkEGL(egl.eglChooseConfig(display, configSpec, null, 0, num_config), egl);
         }
 
         int numConfigs = num_config[0];
         EGLConfig[] configs = new EGLConfig[numConfigs];
-        if (!egl.eglChooseConfig(display, configSpec, configs, numConfigs, num_config)) {
-            RendererUtil.checkEGLError(egl);
-            throw new AssertionError();
-        }
+        checkEGL(egl.eglChooseConfig(display, configSpec, configs, numConfigs, num_config), egl);
 
         logger.fine("--------------Display Configurations---------------");
         for (EGLConfig eGLConfig : configs) {
@@ -184,6 +178,13 @@ public class AndroidConfigChooser implements EGLConfigChooser {
         }
 
         return configs;
+    }
+
+    private static void checkEGL(boolean isEGL, EGL10 egl10) {
+        if (!isEGL) {
+            RendererUtil.checkEGLError(egl10);
+            throw new AssertionError();
+        }
     }
 
     private EGLConfig chooseConfig(
